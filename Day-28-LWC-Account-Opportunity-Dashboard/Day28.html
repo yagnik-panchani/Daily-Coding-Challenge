@@ -1,0 +1,52 @@
+<template>
+
+    <lightning-card title="Account Opportunity Dashboard">
+
+        <lightning-input
+            label="Enter Account Name"
+            onchange={handleChange}>
+        </lightning-input>
+
+        <lightning-button
+            label="Load Details"
+            onclick={handleClick}>
+        </lightning-button>
+
+        <template if:true={display}>
+
+            <template
+                for:each={display}
+                for:item="Acc">
+
+                <div key={Acc.Id}>
+
+                    <p>
+                        <b>Account Name:</b>
+                        {Acc.Name}
+                    </p>
+
+                    <p>
+                        <b>Industry:</b>
+                        {Acc.Industry}
+                    </p>
+
+                    <p>
+                        <b>Rating:</b>
+                        {Acc.Rating}
+                    </p>
+
+                </div>
+
+            </template>
+
+            <lightning-datatable
+                key-field="Id"
+                data={oppData}
+                columns={columns}>
+            </lightning-datatable>
+
+        </template>
+
+    </lightning-card>
+
+</template>
