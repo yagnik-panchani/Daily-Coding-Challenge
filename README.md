@@ -5,7 +5,7 @@ This is where I sharpen my problem‑solving skills, explore algorithms, and bui
 
 ## 📂 Structure
 - 🗂️ Organized by **Day-wise folders** (Day 1, Day 2, …)
-- 💻 Solutions in multiple languages (Apex, Java, Python, etc.)
+- 💻 Solutions in multiple languages (Apex, Java, C, etc.)
 - 📝 Notes and explanations for quick revision
 - 🔄 Automated checks with GitHub Actions (CI/CD)
 
@@ -16,7 +16,7 @@ This is where I sharpen my problem‑solving skills, explore algorithms, and bui
 - Practice discipline and consistency
 
 ## 🛠 Tech Stack
-- **Languages:** Apex, Java, Python, JavaScript
+- **Languages:** Apex, Java,C,C++,JavaScript,Html,Css,MySQL
 - **Tools:** GitHub, GitHub Actions (YAML), Salesforce CLI
 - **Focus:** Clean, readable, and optimized code
 
@@ -25,4 +25,4 @@ This is where I sharpen my problem‑solving skills, explore algorithms, and bui
 
 Clone the repo and explore solutions:
 ```bash
-git clone https://github.com/<your-username>/<repo-name>.git
+git clone https://github.com/<yagnik-panchani>/<Daily-Challenge>.git
