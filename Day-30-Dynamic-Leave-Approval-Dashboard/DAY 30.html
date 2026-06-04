@@ -1,0 +1,56 @@
+<template>
+
+    <div class="slds-grid slds-gutters">
+
+        <div class="slds-col slds-size_1-of-4">
+            <lightning-card title="Total">
+                <p class="slds-p-around_medium">
+                    {total}
+                </p>
+            </lightning-card>
+        </div>
+
+        <div class="slds-col slds-size_1-of-4">
+            <lightning-card title="Approved">
+                <p class="slds-p-around_medium">
+                    {approved}
+                </p>
+            </lightning-card>
+        </div>
+
+        <div class="slds-col slds-size_1-of-4">
+            <lightning-card title="Pending">
+                <p class="slds-p-around_medium">
+                    {pending}
+                </p>
+            </lightning-card>
+        </div>
+
+        <div class="slds-col slds-size_1-of-4">
+            <lightning-card title="Rejected">
+                <p class="slds-p-around_medium">
+                    {rejected}
+                </p>
+            </lightning-card>
+        </div>
+
+    </div>
+
+    <br/>
+
+    <lightning-combobox
+        label="Filter By Status"
+        value={selectedLeave}
+        options={leaveOptions}
+        onchange={handleChange}>
+    </lightning-combobox>
+
+    <br/>
+
+    <lightning-datatable
+        key-field="Id"
+        data={leaveData}
+        columns={columns}>
+    </lightning-datatable>
+
+</template>
