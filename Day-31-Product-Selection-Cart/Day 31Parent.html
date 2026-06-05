@@ -1,0 +1,21 @@
+<template>
+
+    <lightning-card title="Available Products">
+
+        <lightning-datatable
+            key-field="id"
+            data={data}
+            columns={columns}
+            onrowaction={handleRowAction}>
+        </lightning-datatable>
+
+    </lightning-card>
+
+    <br/>
+
+    <c-child
+        display={display}
+        count={selectedCount}>
+    </c-child>
+
+</template>
