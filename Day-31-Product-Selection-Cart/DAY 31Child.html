@@ -1,0 +1,32 @@
+<template>
+
+    <p class="slds-text-heading_medium">
+        Selected Products
+    </p>
+
+    <template if:false={hasProducts}>
+        <p>No Products Selected</p>
+    </template>
+
+    <template if:true={hasProducts}>
+
+        <template for:each={display} for:item="prod">
+
+            <div key={prod.id}
+                 class="slds-box slds-m-bottom_x-small">
+
+                {prod.Product}
+
+            </div>
+
+        </template>
+
+        <p class="slds-m-top_medium">
+
+            Total Products : {count}
+
+        </p>
+
+    </template>
+
+</template>
