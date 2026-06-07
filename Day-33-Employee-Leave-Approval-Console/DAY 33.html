@@ -1,0 +1,62 @@
+<template>
+
+    <lightning-card
+        title="Employee Leave Approval Console">
+
+        <lightning-datatable
+            key-field="Id"
+            data={employees}
+            columns={columns}
+            onrowaction={handleRowAction}>
+        </lightning-datatable>
+
+    </lightning-card>
+
+    <!-- Modal -->
+
+    <template if:true={showModal}>
+
+        <section
+            role="dialog"
+            class="slds-modal slds-fade-in-open">
+
+            <div class="slds-modal__container">
+
+                <div class="slds-modal__header">
+
+                    Reject Leave Request
+
+                </div>
+
+                <div class="slds-modal__content">
+
+                    <lightning-textarea
+                        label="Manager Comment"
+                        value={managerComment}
+                        onchange={handleComment}>
+                    </lightning-textarea>
+
+                </div>
+
+                <div class="slds-modal__footer">
+
+                    <lightning-button
+                        label="Cancel"
+                        onclick={closeModal}>
+                    </lightning-button>
+
+                    <lightning-button
+                        variant="brand"
+                        label="Submit"
+                        onclick={submitReject}>
+                    </lightning-button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </template>
+
+</template>
