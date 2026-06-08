@@ -1,0 +1,107 @@
+<template>
+
+    <!-- Step 1 -->
+
+    <template if:true={isStep1}>
+
+        <lightning-card title="Step 1 - Basic Information">
+
+            <lightning-input
+                label="Employee Name"
+                value={employeeName}
+                onchange={handleEmployeeName}>
+            </lightning-input>
+
+            <lightning-input
+                type="email"
+                label="Email"
+                value={email}
+                onchange={handleEmail}>
+            </lightning-input>
+
+            <lightning-input
+                type="phone"
+                label="Phone"
+                value={phone}
+                onchange={handlePhone}>
+            </lightning-input>
+
+            <lightning-button
+                label="Next"
+                onclick={nextStep}>
+            </lightning-button>
+
+        </lightning-card>
+
+    </template>
+
+    <!-- Step 2 -->
+
+    <template if:true={isStep2}>
+
+        <lightning-card title="Step 2 - Job Information">
+
+            <lightning-combobox
+                label="Department"
+                value={department}
+                options={departmentOptions}
+                onchange={handleDepartment}>
+            </lightning-combobox>
+
+            <lightning-input
+                label="Designation"
+                value={designation}
+                onchange={handleDesignation}>
+            </lightning-input>
+
+            <lightning-input
+                type="number"
+                label="Salary"
+                value={salary}
+                onchange={handleSalary}>
+            </lightning-input>
+
+            <lightning-button
+                label="Previous"
+                onclick={previousStep}>
+            </lightning-button>
+
+            <lightning-button
+                label="Next"
+                onclick={nextStep}>
+            </lightning-button>
+
+        </lightning-card>
+
+    </template>
+
+    <!-- Step 3 -->
+
+    <template if:true={isStep3}>
+
+        <lightning-card title="Review Information">
+
+            <p>Employee Name : {employeeName}</p>
+            <p>Email : {email}</p>
+            <p>Phone : {phone}</p>
+
+            <p>Department : {department}</p>
+            <p>Designation : {designation}</p>
+            <p>Salary : {salary}</p>
+
+            <lightning-button
+                label="Previous"
+                onclick={previousStep}>
+            </lightning-button>
+
+            <lightning-button
+                variant="brand"
+                label="Submit"
+                onclick={handleSubmit}>
+            </lightning-button>
+
+        </lightning-card>
+
+    </template>
+
+</template>
