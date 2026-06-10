@@ -1,0 +1,36 @@
+<template>
+
+    <lightning-card
+        title="Bulk Opportunity Discount Approval Dashboard">
+
+        <lightning-datatable
+
+            key-field="Id"
+
+            data={data}
+
+            columns={columns}
+
+            onrowselection={handleRowSelection}>
+
+        </lightning-datatable>
+
+        <br/>
+
+        <template if:true={selectedCount}>
+
+            <lightning-button
+
+                label="Approve Selected"
+
+                variant="brand"
+
+                onclick={handleClick}>
+
+            </lightning-button>
+
+        </template>
+
+    </lightning-card>
+
+</template>
