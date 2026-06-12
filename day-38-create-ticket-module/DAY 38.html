@@ -1,0 +1,41 @@
+<template>
+    <lightning-card title="Create Ticket">
+
+        <div class="slds-p-around_medium">
+
+            <lightning-input
+                label="Subject"
+                value={subject}
+                onchange={handleSubject}>
+            </lightning-input>
+
+            <lightning-textarea
+                label="Description"
+                value={description}
+                onchange={handleDescription}>
+            </lightning-textarea>
+
+            <lightning-combobox
+                label="Priority"
+                value={priority}
+                options={priorityOptions}
+                onchange={handlePriority}>
+            </lightning-combobox>
+
+            <lightning-combobox
+                label="Customer"
+                value={customerId}
+                options={customerOptions}
+                onchange={handleCustomer}>
+            </lightning-combobox>
+
+            <lightning-button
+                label="Create Ticket"
+                variant="brand"
+                onclick={createTicketRecord}>
+            </lightning-button>
+
+        </div>
+
+    </lightning-card>
+</template>
