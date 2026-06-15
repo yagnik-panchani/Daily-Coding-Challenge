@@ -1,0 +1,24 @@
+<template>
+
+    <lightning-card
+        title="Employee Leave Balance Tracker">
+
+        <div class="slds-p-around_medium">
+
+            <lightning-button
+                label="Recalculate Leave Balance"
+                variant="brand"
+                onclick={handleCalculate}>
+            </lightning-button>
+
+        </div>
+
+        <lightning-datatable
+            key-field="Id"
+            data={employeeData}
+            columns={columns}>
+        </lightning-datatable>
+
+    </lightning-card>
+
+</template>
