@@ -1,0 +1,18 @@
+<template>
+
+
+
+<template if:true={Accounts.data}>
+    
+<lightning-datatable label="Accounr List"
+ data={Accounts.data} columns={columns}>
+
+</lightning-datatable>
+
+</template>
+
+<template if:false={Accounts.error}>
+    <p style="color:red;">Error While loading the data : {Accoutns.error}</p>
+</template>
+
+</template>
