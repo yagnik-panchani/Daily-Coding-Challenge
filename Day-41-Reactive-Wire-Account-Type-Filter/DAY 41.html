@@ -1,0 +1,14 @@
+<template>
+
+<lightning-combobox name="Type" label="Select Type" value={selectedType} placeholder='Choose an Option'
+options={options} onchange={handleChange}>
+</lightning-combobox>
+
+<template if:true={accounts.data}>
+    <p> Data is fetched Successfully</p>
+</template>
+
+<template if:true={accounts.error}>
+    <p>Data is not found {accounts.error}</p>
+</template>
+</template>
