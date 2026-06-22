@@ -1,0 +1,30 @@
+<template>
+
+    <lightning-combobox
+        name="Select Rating"
+        label="Select Rating"
+        value={selectedValue}
+        placeholder="Please Select Rating"
+        options={options}
+        onchange={handleChange}>
+    </lightning-combobox>
+
+    <br/>
+
+    <div class="slds-text-heading_medium">
+        Total Accounts : {totalAccounts}
+    </div>
+
+    <br/>
+
+    <template if:true={accounts}>
+
+        <lightning-datatable
+            key-field="Id"
+            data={accounts}
+            columns={columns}>
+        </lightning-datatable>
+
+    </template>
+
+</template>
