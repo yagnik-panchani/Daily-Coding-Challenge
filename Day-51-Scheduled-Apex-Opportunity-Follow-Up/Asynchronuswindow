@@ -1,0 +1,3 @@
+String cronExp = '0 0 9 * * ?';
+CreateTask taskk = new CreateTask();
+System.schedule('Daily Opportunity checks',cronExp,taskk);
