@@ -1,0 +1,7 @@
+String cronExp = '0 0 2 * * ?';
+
+System.schedule(
+    'Nightly Contact Cleanup',
+    cronExp,
+    new ContactCleanupScheduler()
+);
